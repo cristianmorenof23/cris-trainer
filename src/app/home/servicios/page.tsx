@@ -11,7 +11,7 @@ export default function ServicioSection() {
 
       {/* Contenido principal */}
       <div className="relative z-10 max-w-xl text-center text-white mb-12">
-        <h2 className={` ${bebas.className} text-amber-400 text-6xl font-bold mb-2`}>Servicios como Entrenador</h2>
+        <h2 className={` ${bebas.className} text-amber-400 text-6xl font-bold mb-2 tracking-in-expand`}>Servicios como Entrenador</h2>
         <p className={` ${bebas.className}  text-2xl text-gray-300`}>
           Potenciá tu cuerpo con un plan de entrenamiento adaptado a tus objetivos físicos.
         </p>

@@ -9,15 +9,15 @@ export default function InicioPage() {
 
       {/* TEXTO */}
       <div className="space-y-6">
-        <p className="text-amber-400 text-2xl sm:text-3xl tracking-wide uppercase">
+        <p className="text-amber-400 text-2xl sm:text-3xl tracking-wide uppercase tracking-in-expand">
           Entrenamiento personalizado – Online
         </p>
 
-        <h2 className="text-5xl sm:text-7xl leading-tight text-white">
+        <h2 className="text-5xl sm:text-7xl leading-tight text-white tracking-in-expand">
           Tu cambio físico <br /> empieza hoy
         </h2>
 
-        <p className="text-2xl text-gray-300 max-w-md">
+        <p className="text-2xl text-gray-300 max-w-md ">
           Más de 10 años de experiencia entrenando. Te ayudo a alcanzar tus objetivos con un plan real, sin humo.
         </p>
 
@@ -55,7 +55,7 @@ export default function InicioPage() {
           alt="Cristian Moreno - Entrenador"
           width={500}
           height={500}
-          className="rounded-xl object-cover max-w-full h-auto shadow-lg shadow-amber-500/10"
+          className="rounded-xl object-cover max-w-full h-auto shadow-lg shadow-amber-500/10 fade-in "
         />
       </div>
     </section>

@@ -32,7 +32,7 @@ export default function ContactoPage() {
       <div className="absolute inset-0 bg-[url('/background-gym.jpg')] bg-cover bg-center opacity-10 z-0" />
 
       <div className="relative z-10 max-w-xl w-full bg-white p-8 rounded-lg shadow-lg">
-        <h2 className={`${bebas.className} text-4xl text-amber-500 font-bold text-center mb-6`}>
+        <h2 className={`${bebas.className} text-4xl text-amber-500  tracking-in-expand font-bold text-center mb-6`}>
           Contacto
         </h2>
 
