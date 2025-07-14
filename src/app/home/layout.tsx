@@ -3,8 +3,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-
-
 export default function HomeLayout({
   children,
 }: {
@@ -14,7 +12,7 @@ export default function HomeLayout({
 
   const navLinks = [
     { label: "Inicio", href: "/home/inicio" },
-    { label: "Servicios", href: "/home/servicios" },
+    { label: "Planes", href: "/home/servicios" },
     { label: "Contacto", href: "/home/contacto" },
   ];
 
