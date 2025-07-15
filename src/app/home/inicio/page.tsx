@@ -61,10 +61,10 @@ export default function InicioPage() {
       {/* IMAGEN */}
       <div className="flex justify-center">
         <Image
-          src="/criss.jpg"
+          src="/cris_dos.jpg"
           alt="Cristian Moreno - Entrenador"
-          width={500}
-          height={500}
+          width={600}
+          height={600}
           className="rounded-xl object-cover max-w-full h-auto shadow-lg shadow-amber-500/10 fade-in "
         />
       </div>

@@ -22,7 +22,7 @@ export default function HomeLayout({
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
       <header className="bg-black relative z-50 shadow-[0_7px_12px_-6px_rgba(253,224,71,0.5)]">
-        <div className="flex justify-between items-center px-6 py-5 sm:py-6">
+        <div className="flex justify-around items-center px-6 py-5 sm:py-6">
           {/* Logo */}
           <div className="flex items-center gap-6 ">
             <Link href="/home/inicio">
