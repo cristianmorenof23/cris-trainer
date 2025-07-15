@@ -3,6 +3,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { poppins } from "./fonts"// 👈 importa la fuente (o también bebas si querés usarla acá)
+import { Analytics } from "@vercel/analytics/next"
+
+
 
 export const metadata: Metadata = {
   title: "Cristian Moreno - Trainer",
@@ -21,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased bg-black`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
