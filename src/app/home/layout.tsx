@@ -1,7 +1,10 @@
 "use client"
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/outline";
+import { GlobeAltIcon } from "@heroicons/react/24/solid"; // lo usamos como ícono "genérico" para Instagram
 
 export default function HomeLayout({
   children,
@@ -21,13 +24,25 @@ export default function HomeLayout({
       <header className="bg-black relative z-50 shadow-[0_7px_12px_-6px_rgba(253,224,71,0.5)]">
         <div className="flex justify-between items-center px-6 py-5 sm:py-6">
           {/* Logo */}
-          <Link href="/home/inicio">
-            <h1 className="text-2xl font-bold cursor-pointer">Cristian Moreno</h1>
-          </Link>
+          <div className="flex items-center gap-6 ">
+            <Link href="/home/inicio">
+              <Image
+                src="/logo.jpg"
+                alt='Imagen logo tipo'
+                width={100}
+                height={100}
+              />
+            </Link>
+
+            <Link
+              href="/home/inicio"
+              className={`font-extralight text-white text-4xl`}
+            >Cristian Moreno</Link>
+          </div>
 
           {/* Menu toggle button (visible solo en sm y menos) */}
           <button
-            className="sm:hidden text-amber-400 focus:outline-none hover:cursor-pointer hover:scale-125 transition-all "
+            className="sm:hidden flex items-center gap-2 text-amber-400 focus:outline-none hover:cursor-pointer hover:scale-110 transition-all"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -36,7 +51,7 @@ export default function HomeLayout({
             {menuOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,7 +62,7 @@ export default function HomeLayout({
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -56,6 +71,8 @@ export default function HomeLayout({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
               </svg>
             )}
+            {/* Texto al lado del icono */}
+            <span className="font-semibold text-lg select-none">Menu</span>
           </button>
 
           {/* Navegación (oculta en móvil si no está abierto) */}
@@ -78,6 +95,38 @@ export default function HomeLayout({
       </header>
 
       <main className="flex-grow">{children}</main>
+
+      <footer className="bg-black text-white py-8 mt-16">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <p className="text-sm text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Cristian Moreno. Todos los derechos reservados.
+          </p>
+
+          <div className="flex space-x-6">
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/3513336631"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-400 transition flex items-center gap-2"
+            >
+              <ChatBubbleBottomCenterIcon className="h-5 w-5 text-amber-400" />
+              WhatsApp
+            </a>
+
+            {/* Instagram (usamos un ícono genérico) */}
+            <a
+              href="https://www.instagram.com/cristianmorenof23"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-400 transition flex items-center gap-2"
+            >
+              <GlobeAltIcon className="h-5 w-5 text-amber-400" />
+              Instagram
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
